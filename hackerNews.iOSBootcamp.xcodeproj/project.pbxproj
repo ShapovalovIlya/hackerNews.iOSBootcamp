@@ -12,7 +12,6 @@
 		860C726E2839755100AC667E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860C726D2839755100AC667E /* Assets.xcassets */; };
 		860C72712839755100AC667E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860C72702839755100AC667E /* Preview Assets.xcassets */; };
 		860C727828397DC900AC667E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C727728397DC900AC667E /* Post.swift */; };
-		860C727A28397E7600AC667E /* HackerNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C727928397E7600AC667E /* HackerNewsModel.swift */; };
 		860C727D283980F300AC667E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C727C283980F300AC667E /* NetworkManager.swift */; };
 		860C727F2839834200AC667E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C727E2839834200AC667E /* PostData.swift */; };
 		860C7282283AA60900AC667E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C7281283AA60900AC667E /* DetailView.swift */; };
@@ -26,11 +25,11 @@
 		860C726D2839755100AC667E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		860C72702839755100AC667E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		860C727728397DC900AC667E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		860C727928397E7600AC667E /* HackerNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsModel.swift; sourceTree = "<group>"; };
 		860C727C283980F300AC667E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		860C727E2839834200AC667E /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		860C7281283AA60900AC667E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		860C7283283AAA7600AC667E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		860C7285283AB58200AC667E /* hackerNews.iOSBootcamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackerNews.iOSBootcamp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +62,7 @@
 		860C72682839755000AC667E /* hackerNews.iOSBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				860C7285283AB58200AC667E /* hackerNews.iOSBootcamp.entitlements */,
 				860C72692839755000AC667E /* hackerNews_iOSBootcampApp.swift */,
 				860C7280283AA5DB00AC667E /* View */,
 				860C727B2839807700AC667E /* Model */,
@@ -83,7 +83,6 @@
 		860C727B2839807700AC667E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				860C727928397E7600AC667E /* HackerNewsModel.swift */,
 				860C727C283980F300AC667E /* NetworkManager.swift */,
 				860C727728397DC900AC667E /* Post.swift */,
 				860C727E2839834200AC667E /* PostData.swift */,
@@ -171,7 +170,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860C727A28397E7600AC667E /* HackerNewsModel.swift in Sources */,
 				860C7284283AAA7600AC667E /* WebView.swift in Sources */,
 				860C727F2839834200AC667E /* PostData.swift in Sources */,
 				860C726C2839755000AC667E /* ContentView.swift in Sources */,
@@ -304,6 +302,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hackerNews.iOSBootcamp/hackerNews.iOSBootcamp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackerNews.iOSBootcamp/Preview Content\"";
@@ -320,8 +320,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "IliaByHimself.hackerNews-iOSBootcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = IliaByHimself.hackerNews.iOSBootcamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,6 +334,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = hackerNews.iOSBootcamp/hackerNews.iOSBootcamp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"hackerNews.iOSBootcamp/Preview Content\"";
@@ -349,8 +352,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "IliaByHimself.hackerNews-iOSBootcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = IliaByHimself.hackerNews.iOSBootcamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
